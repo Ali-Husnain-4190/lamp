@@ -1,0 +1,6 @@
+vpc_name            = "my_vpc"
+vpc_cidr            = "10.0.0.0/25"
+public_subnet_cidr  = "10.0.0.0/26"
+private_subnet_cidr = "10.0.0.64/26"
+availability_zone   = "us-east-1a"
+env_name            = "dev"
