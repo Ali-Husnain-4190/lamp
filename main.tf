@@ -27,13 +27,20 @@ module "networking" {
   tag_name            = var.tag_name
 }
 
-
-
-# resource "aws_instance" "app_server" {
-#   ami           = "ami-830c94e3"
-#   instance_type = "t2.micro"
-
-#   tags = {
-#     Name = "ExampleAppServerInstance"
-#   }
-# }
+module "Ec2" {
+source="./Ec2"
+ami_id=var.ami_id
+# instance_type=var.instance_type
+env_name=var.env_name
+vpc_id=module.networking.vpc_id
+subnet_id = module.networking.public_subnet_id
+}
+output "vpc_id" {
+  value = module.networking.vpc_id
+}
+output "public_subnet" {
+  value = module.networking.public_subnet_id
+}
+output "security_group_id" {
+  value = module.networking.public_sg
+}
