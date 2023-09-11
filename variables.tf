@@ -10,10 +10,18 @@ variable "public_subnet_cidr" {
 variable "private_subnet_cidr" {
   type = string
 }
+variable "public_subnet_cidr_2" {
+  type = string
+}
+variable "private_subnet_cidr_2" {
+  type = string
+}
 variable "availability_zone" {
   type = string
 }
-
+variable "availability_zone_2" {
+  type = string
+}
 
 variable "tag_name" {
   type = map(string)
@@ -31,12 +39,8 @@ variable "env_name" {
 variable "ami_id" {
   type=string
 }
-# varibale "instance_type"{
-#   type=string
-# }
-
-variable "subnet_id" {
-  type=string
+variable "instance_type"{
+  type = string
 }
 
 

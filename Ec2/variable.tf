@@ -4,9 +4,17 @@ variable "env_name" {
 variable "ami_id" {
   type=string
 }
-# varibale "instance_type"{
-#   type=string
-# }
+variable "instance_type"{
+  type=string
+}
 variable "subnet_id" {
+  type=string
+}
+
+variable "subnet_id_2" {
+  type=string
+}
+
+variable "vpc_id" {
   type=string
 }
