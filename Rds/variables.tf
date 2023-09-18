@@ -1,0 +1,10 @@
+variable "subnet_id" {
+  type=string
+}
+
+variable "subnet_id_2" {
+  type=string
+}
+variable "vpc_id" {
+  type=string
+}

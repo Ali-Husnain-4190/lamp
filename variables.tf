@@ -37,9 +37,9 @@ variable "env_name" {
   type = string
 }
 variable "ami_id" {
-  type=string
+  type = string
 }
-variable "instance_type"{
+variable "instance_type" {
   type = string
 }
 

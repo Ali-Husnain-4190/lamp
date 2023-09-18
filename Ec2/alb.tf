@@ -32,6 +32,7 @@ resource "aws_lb_listener" "alb_listner" {
   }
 }
 resource "aws_lb_target_group" "test" {
+depends_on = [ aws_lb.test ]
   name     = "tf-example-lb-tg"
   port     = 80
   protocol = "HTTP"

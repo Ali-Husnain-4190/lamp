@@ -4,13 +4,13 @@
 # }
 
 resource "aws_instance" "web" {
-  count=2
+  count = 2
   ami           = var.ami_id
   instance_type = var.instance_type
   # vpc_id = var.vpc_id
   subnet_id     = var.subnet_id
   vpc_security_group_ids  = [ aws_security_group.ssh.id, aws_security_group.my_public_sg.id]
-   key_name      = "bastionhost"
+  #  key_name      = "bastionhost"
   tags = {
     Name = var.env_name
   }
